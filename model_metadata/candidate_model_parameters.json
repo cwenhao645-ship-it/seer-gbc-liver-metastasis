@@ -1,0 +1,301 @@
+[
+  {
+    "Tier": "Tier1",
+    "Model": "Linear Logistic",
+    "Selected parameters": {
+      "C": 3.478702825799607
+    },
+    "Best CV score": 0.1388146828966146,
+    "Search scoring": "average_precision",
+    "Feature columns": [
+      "Age_Years",
+      "Age_Group",
+      "Sex",
+      "Race_Group",
+      "Marital_Status"
+    ]
+  },
+  {
+    "Tier": "Tier1",
+    "Model": "Spline Logistic",
+    "Selected parameters": {
+      "C": 8.970410111823023
+    },
+    "Best CV score": 0.1369551393919531,
+    "Search scoring": "average_precision",
+    "Feature columns": [
+      "Age_Years",
+      "Age_Group",
+      "Sex",
+      "Race_Group",
+      "Marital_Status"
+    ]
+  },
+  {
+    "Tier": "Tier1",
+    "Model": "XGBoost",
+    "Selected parameters": {
+      "colsample_bytree": 0.545455515575173,
+      "gamma": 0.5369497137803136,
+      "learning_rate": 0.021396053593642578,
+      "max_delta_step": 1,
+      "max_depth": 1,
+      "min_child_weight": 10,
+      "n_estimators": 854,
+      "reg_alpha": 6.020666841860537,
+      "reg_lambda": 36.22460628605993,
+      "scale_pos_weight": 0.6116546590058146,
+      "subsample": 0.6335674870461441,
+      "probability_calibration": "isotonic",
+      "tree_balanced_oof_score": 0.6123370194296269
+    },
+    "Best CV score": 0.6123370194296269,
+    "Search scoring": "average_precision",
+    "Feature columns": [
+      "Age_Years",
+      "Age_Group",
+      "Sex",
+      "Race_Group",
+      "Marital_Status"
+    ]
+  },
+  {
+    "Tier": "Tier1",
+    "Model": "CatBoost",
+    "Selected parameters": {
+      "iterations": 341,
+      "depth": 2,
+      "learning_rate": 0.02292726049825177,
+      "l2_leaf_reg": 5.873727621732856,
+      "random_strength": 2.3708436474130905,
+      "bagging_temperature": 0.11921752619774462,
+      "border_count": 249,
+      "scale_pos_weight_mult": 0.12099655314963777,
+      "probability_calibration": "isotonic",
+      "tree_balanced_oof_score": 0.6038766229474444
+    },
+    "Best CV score": 0.6140401349250345,
+    "Search scoring": "average_precision",
+    "Feature columns": [
+      "Age_Years",
+      "Age_Group",
+      "Sex",
+      "Race_Group",
+      "Marital_Status"
+    ]
+  },
+  {
+    "Tier": "Tier2",
+    "Model": "Linear Logistic",
+    "Selected parameters": {
+      "C": 8.970410111823023
+    },
+    "Best CV score": 0.1223346848531377,
+    "Search scoring": "average_precision",
+    "Feature columns": [
+      "Age_Years",
+      "Age_Group",
+      "Sex",
+      "Race_Group",
+      "Marital_Status",
+      "Histology_Confirmed",
+      "Unified_T",
+      "Unified_N",
+      "Unified_Grade",
+      "Tumor_Size_Model"
+    ]
+  },
+  {
+    "Tier": "Tier2",
+    "Model": "Spline Logistic",
+    "Selected parameters": {
+      "C": 14.886262201211787
+    },
+    "Best CV score": 0.1155938087794401,
+    "Search scoring": "average_precision",
+    "Feature columns": [
+      "Age_Years",
+      "Age_Group",
+      "Sex",
+      "Race_Group",
+      "Marital_Status",
+      "Histology_Confirmed",
+      "Unified_T",
+      "Unified_N",
+      "Unified_Grade",
+      "Tumor_Size_Model"
+    ]
+  },
+  {
+    "Tier": "Tier2",
+    "Model": "XGBoost",
+    "Selected parameters": {
+      "colsample_bytree": 0.5302000526650361,
+      "gamma": 0.6680177574904758,
+      "learning_rate": 0.010221459088888387,
+      "max_delta_step": 4,
+      "max_depth": 2,
+      "min_child_weight": 4,
+      "n_estimators": 310,
+      "reg_alpha": 1.3473061435903473,
+      "reg_lambda": 1.1951243194736103,
+      "scale_pos_weight": 11.056102734935177,
+      "subsample": 0.934526115273963,
+      "probability_calibration": "isotonic",
+      "tree_balanced_oof_score": 0.734355519018578
+    },
+    "Best CV score": 0.734355519018578,
+    "Search scoring": "average_precision",
+    "Feature columns": [
+      "Age_Years",
+      "Age_Group",
+      "Sex",
+      "Race_Group",
+      "Marital_Status",
+      "Histology_Confirmed",
+      "Unified_T",
+      "Unified_N",
+      "Unified_Grade",
+      "Tumor_Size_Model"
+    ]
+  },
+  {
+    "Tier": "Tier2",
+    "Model": "CatBoost",
+    "Selected parameters": {
+      "iterations": 350,
+      "depth": 2,
+      "learning_rate": 0.043529250269903605,
+      "l2_leaf_reg": 7.568223207537031,
+      "random_strength": 0.806358895168009,
+      "bagging_temperature": 0.5010447751033635,
+      "border_count": 52,
+      "scale_pos_weight_mult": 0.08113213053885943,
+      "probability_calibration": "isotonic",
+      "tree_balanced_oof_score": 0.7294402297266049
+    },
+    "Best CV score": 0.7525190970536497,
+    "Search scoring": "average_precision",
+    "Feature columns": [
+      "Age_Years",
+      "Age_Group",
+      "Sex",
+      "Race_Group",
+      "Marital_Status",
+      "Histology_Confirmed",
+      "Unified_T",
+      "Unified_N",
+      "Unified_Grade",
+      "Tumor_Size_Model"
+    ]
+  },
+  {
+    "Tier": "Tier3",
+    "Model": "Linear Logistic",
+    "Selected parameters": {
+      "C": 0.07081203049440488
+    },
+    "Best CV score": 0.3461202121471539,
+    "Search scoring": "average_precision",
+    "Feature columns": [
+      "Age_Years",
+      "Age_Group",
+      "Sex",
+      "Race_Group",
+      "Marital_Status",
+      "Histology_Confirmed",
+      "Unified_T",
+      "Unified_N",
+      "Unified_Grade",
+      "Tumor_Size_Model",
+      "Missing_Size_Indicator"
+    ]
+  },
+  {
+    "Tier": "Tier3",
+    "Model": "Spline Logistic",
+    "Selected parameters": {
+      "C": 0.07081203049440488
+    },
+    "Best CV score": 0.3469023964528518,
+    "Search scoring": "average_precision",
+    "Feature columns": [
+      "Age_Years",
+      "Age_Group",
+      "Sex",
+      "Race_Group",
+      "Marital_Status",
+      "Histology_Confirmed",
+      "Unified_T",
+      "Unified_N",
+      "Unified_Grade",
+      "Tumor_Size_Model",
+      "Missing_Size_Indicator"
+    ]
+  },
+  {
+    "Tier": "Tier3",
+    "Model": "XGBoost",
+    "Selected parameters": {
+      "colsample_bytree": 0.8493916178868327,
+      "gamma": 1.995868221066675,
+      "learning_rate": 0.014297384475124965,
+      "max_delta_step": 5,
+      "max_depth": 1,
+      "min_child_weight": 12,
+      "n_estimators": 816,
+      "reg_alpha": 0.39821758689311715,
+      "reg_lambda": 1.747205332392636,
+      "scale_pos_weight": 1.5634799485849686,
+      "subsample": 0.5866797340445721,
+      "probability_calibration": "sigmoid",
+      "tree_balanced_oof_score": 1.2429669966190904
+    },
+    "Best CV score": 1.24296699661909,
+    "Search scoring": "average_precision",
+    "Feature columns": [
+      "Age_Years",
+      "Age_Group",
+      "Sex",
+      "Race_Group",
+      "Marital_Status",
+      "Histology_Confirmed",
+      "Unified_T",
+      "Unified_N",
+      "Unified_Grade",
+      "Tumor_Size_Model",
+      "Missing_Size_Indicator"
+    ]
+  },
+  {
+    "Tier": "Tier3",
+    "Model": "CatBoost",
+    "Selected parameters": {
+      "iterations": 678,
+      "depth": 5,
+      "learning_rate": 0.017522334232626446,
+      "l2_leaf_reg": 29.757972203852272,
+      "random_strength": 3.3561570665429628,
+      "bagging_temperature": 0.33363775832823817,
+      "border_count": 196,
+      "scale_pos_weight_mult": 0.564190080109303,
+      "probability_calibration": "sigmoid",
+      "tree_balanced_oof_score": 1.2433039875625778
+    },
+    "Best CV score": 1.246925318423157,
+    "Search scoring": "average_precision",
+    "Feature columns": [
+      "Age_Years",
+      "Age_Group",
+      "Sex",
+      "Race_Group",
+      "Marital_Status",
+      "Histology_Confirmed",
+      "Unified_T",
+      "Unified_N",
+      "Unified_Grade",
+      "Tumor_Size_Model",
+      "Missing_Size_Indicator"
+    ]
+  }
+]

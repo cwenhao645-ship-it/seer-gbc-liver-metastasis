@@ -1,0 +1,42 @@
+{
+  "snapshot_prepared": "2026-10-08",
+  "version_label": "1.0.0-rc1",
+  "status": "pre-publication local snapshot; no remote upload or DOI assigned",
+  "source_peer_review_zip_sha256": "a66e27183ad4280526824a362b6d41e43ee59bcd9286bf260a4ed0e6c898aa2e",
+  "source_zip_file_count": 64,
+  "analysis_scripts_copied_unchanged": {
+    "analysis_code/archived_pipeline/_embedded_modelopt_calibrated_ARCHIVED.py": "5ade0791b5ff5c096075013fb08d279e325dc1d303569d2c02c776b33aff8f26",
+    "analysis_code/corrected_pipeline/_embedded_modelopt_calibrated_DEVELOPMENT_OOF_CORRECTED.py": "9ae79f0009c018a9b7778e0794b43c5aa72ca57a279b99d06e3fbe1503f06c21",
+    "analysis_code/reviewer1_revision/redraw_final_figures.py": "abbc67142fd892bbe40b8199d8ac194a3c4e711da6ad21353bc09c558ed9b1c8",
+    "analysis_code/reviewer1_revision/run_reviewer1_analyses.py": "4004b1bb82bcb238c6c054929c60720d76ef81742749b6a5522689d0a501e54e",
+    "analysis_code/reviewer1_revision/revision_common.py": "572cebfc0c29bebdd0648e005bb21b5afe161adca76f1636bcb52500b57f361f",
+    "analysis_code/reviewer1_revision/model_selection_audit.py": "608366ff0279c2b0c3ba916c3a74b5670a763b41fcdbd589c31649bc7c34096c",
+    "analysis_code/reviewer1_revision/run_reporting_subgroup_analysis.py": "b1b0201d29d6b65bdac0e64d581667671c2a47b51356b01558e0965c63eca7dc"
+  },
+  "public_subset_changes": [
+    {
+      "path": "aggregate_outputs/target_outcome_status_SMD.csv",
+      "reason": "public_subset: omit entire categorical age/race blocks"
+    },
+    {
+      "path": "aggregate_outputs/demographic_subgroup_bootstrap_replicates.csv",
+      "reason": "public_subset: retain only discrimination/Brier bootstrap summaries"
+    },
+    {
+      "path": "aggregate_outputs/demographic_subgroup_performance.csv",
+      "reason": "public_subset: omit threshold metrics, intervals, and confusion counts for all subgroups"
+    },
+    {
+      "path": "aggregate_outputs/covariate_balance.csv",
+      "reason": "public_subset: omit categorical age/race balance rows"
+    },
+    {
+      "path": "model_metadata/data_dictionary_TableS8.csv",
+      "reason": "public_subset: 21 definitions retained; categorical age frequencies omitted"
+    }
+  ],
+  "analysis_rerun_during_packaging": false,
+  "code_license_author_approved": "MIT",
+  "non_software_materials_open_license_assigned": false,
+  "submission_package_modified": false
+}

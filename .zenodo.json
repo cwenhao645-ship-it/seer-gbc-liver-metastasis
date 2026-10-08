@@ -1,0 +1,23 @@
+{
+  "title": "Temporal validation of liver metastasis risk enrichment at diagnosis in T1 and T2 gallbladder cancer using SEER registry data: code and aggregate reproducibility materials",
+  "version": "1.0.0-rc1",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "mit",
+  "language": "eng",
+  "creators": [
+    {"name": "Chen, Wenhao", "affiliation": "Clinical Medical School, Qinghai University, Xining, China"},
+    {"name": "Pan, Peng", "affiliation": "Clinical Medical School, Qinghai University, Xining, China"},
+    {"name": "Wei, Jinlu", "affiliation": "Clinical Medical School, Qinghai University, Xining, China"},
+    {"name": "Wang, Zhanjin", "affiliation": "Clinical Medical School, Qinghai University, Xining, China"},
+    {"name": "Du, Kaihao", "affiliation": "Clinical Medical School, Qinghai University, Xining, China"},
+    {"name": "Xue, Weiwei", "affiliation": "Clinical Medical School, Qinghai University, Xining, China"},
+    {"name": "Wang, Zhan", "affiliation": "Qinghai University Affiliated Hospital, Xining, China"}
+  ],
+  "description": "<p>Pre-publication minor-revision snapshot supporting Temporal validation of liver metastasis risk enrichment at diagnosis in T1 and T2 gallbladder cancer using SEER registry data. Includes analysis code, development settings, all 12 candidate tuning records, the 21-variable dictionary, disclosure-screened aggregate estimates and figure sources, bootstrap/simulation summaries, and selected final manuscript figures.</p><p>The registry-input recoding analysis repeated model development, calibration, and threshold selection. It is not fixed-model test-time masking. Historical scripts are preserved alongside a development-only designation reference for future reruns. The post hoc model-designation audit does not recreate prospective selection.</p><p>No individual-level SEER records, case-level predictions, case-level SHAP source data, or serialized fitted estimators are distributed. Selected demographic count blocks and threshold metrics are excluded to avoid small-cell disclosure. SEER access is governed by the applicable data-use agreement.</p><p><strong>Mixed rights:</strong> MIT applies ONLY to the software and associated software documentation. Aggregate data, workbooks, dictionaries, and manuscript figures retain their existing rights; no additional open-data or figure license is granted. The software-license field does not relicense SEER data or these accompanying materials. See docs/LICENSING.md for the detailed scope.</p>",
+  "notes": "MIT is the software license only. Accompanying aggregate research materials and figures retain their existing rights. No individual-level SEER data or fitted models are included. The manuscript remains under review; no article DOI is assigned.",
+  "keywords": ["gallbladder cancer", "liver metastasis", "SEER", "temporal validation", "risk enrichment", "registry-input recoding"],
+  "related_identifiers": [
+    {"identifier": "https://github.com/cwenhao645-ship-it/seer-gbc-liver-metastasis", "relation": "isSupplementTo"}
+  ]
+}

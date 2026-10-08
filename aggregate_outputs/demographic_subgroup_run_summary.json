@@ -1,0 +1,13 @@
+{
+  "analysis": "Locked temporal-test demographic subgroup performance",
+  "records": 1934,
+  "events": 277,
+  "locked_threshold": 0.083676403864062,
+  "bootstrap_replicates_per_subgroup": 1000,
+  "seed": 20260721,
+  "subgroups": 10,
+  "model_refit": false,
+  "recalibration": false,
+  "threshold_retuning": false,
+  "interpretation": "Exploratory reporting analysis; not a fairness or equivalence test"
+}

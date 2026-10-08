@@ -1,0 +1,12 @@
+{
+  "audit_scope": "Tier 3 fixed-hyperparameter development-only OOF adjudication",
+  "raw_records": 14513,
+  "development_n": 3649,
+  "development_events": 440,
+  "documented_composite_winner": "CatBoost",
+  "catboost_locked_threshold_reconstructed": 0.08367640386406207,
+  "expected_locked_threshold": 0.08367640386406207,
+  "threshold_absolute_difference": 0.0,
+  "row_level_predictions_written": false,
+  "output_csv": "aggregate_outputs/development_oof_model_selection_audit.csv"
+}

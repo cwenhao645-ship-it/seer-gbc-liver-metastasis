@@ -1,0 +1,14 @@
+﻿Characteristic,Observed_tumor_size,Missing_tumor_size,Abs_SMD
+"Cohort size, n","4,117","1,517",
+Outcome status observed,"4,095 (99.5%)","1,488 (98.1%)",0.12555604477204155
+Histology confirmed,"3,977 (96.6%)","1,424 (93.9%)",0.12841069940372685
+Primary surgery status: Performed,"3,743 (90.9%)","1,225 (80.8%)",0.294630863466839
+Primary surgery status: Not performed,370 (9.0%),286 (18.9%),0.28795138275214155
+Primary surgery status: Unknown,4 (0.1%),6 (0.4%),0.060215242637657256
+T-NOS,379 (9.2%),344 (22.7%),0.374382416169047
+NX,321 (7.8%),190 (12.5%),0.1569615195246779
+Grade unknown,442 (10.7%),384 (25.3%),0.38623295817837056
+Temporal test period,"1,488 (36.1%)",463 (30.5%),0.11947584573107195
+Locked high-risk group,"1,772 (43.0%)",942 (62.1%),0.3887498058482322
+"Locked predicted probability, median [IQR]","0.075 [0.040, 0.124]","0.101 [0.069, 0.237]",0.4497138790792393
+"Liver metastasis among known outcomes, n (%)",450 (11.0%),267 (17.9%),

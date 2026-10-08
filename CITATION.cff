@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "Please cite this software snapshot and the associated article once published."
+type: software
+title: "SEER gallbladder cancer: temporal validation of liver-metastasis risk enrichment"
+version: "1.0.0-rc1"
+license: MIT
+repository-code: "https://github.com/cwenhao645-ship-it/seer-gbc-liver-metastasis"
+authors:
+  - family-names: Chen
+    given-names: Wenhao
+    affiliation: "Clinical Medical School, Qinghai University, Xining, China"
+  - family-names: Wang
+    given-names: Zhan
+    affiliation: "Qinghai University Affiliated Hospital, Xining, China"
+abstract: >-
+  Code and aggregate research materials for the minor-revision snapshot prepared
+  on 8 October 2026 of Temporal validation of liver metastasis risk enrichment at
+  diagnosis in T1 and T2 gallbladder cancer using SEER registry data. Associated
+  manuscript authors, in order: Wenhao Chen, Peng Pan, Jinlu Wei, Zhanjin Wang,
+  Kaihao Du, Weiwei Xue, and Zhan Wang. Individual-level SEER data, case-level
+  predictions and SHAP values, and fitted estimators are excluded. MIT covers
+  software and associated software documentation only; other materials have
+  separate rights as described in docs/LICENSING.md. The article is under review.
+keywords:
+  - gallbladder cancer
+  - liver metastasis
+  - SEER
+  - temporal validation
+  - risk enrichment
+  - registry-input recoding

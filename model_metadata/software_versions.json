@@ -1,0 +1,20 @@
+{
+  "snapshot_date": "2026-07-21",
+  "operating_system": "Windows 10 10.0.19045 SP0",
+  "python": "3.13.3",
+  "numpy": "2.4.2",
+  "pandas": "2.3.3",
+  "scipy": "1.17.1",
+  "scikit_learn": "1.8.0",
+  "statsmodels": "0.14.6",
+  "xgboost": "3.2.0",
+  "catboost": "1.2.10",
+  "shap": "0.51.0",
+  "matplotlib": "3.10.8",
+  "python_docx": "1.2.0",
+  "openpyxl": "3.1.5",
+  "microsoft_word": "16.0 build 16.0.19127",
+  "analysis_seed_original": 42,
+  "revision_analysis_seed": 20260721,
+  "note": "The source snapshot is immutable evidence. Final documents and rerun outputs are generated outside this directory."
+}

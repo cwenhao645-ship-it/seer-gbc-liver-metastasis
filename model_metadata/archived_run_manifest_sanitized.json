@@ -1,0 +1,133 @@
+{
+  "script": "_embedded_modelopt_calibrated.py",
+  "input_file": "<SEER_INPUT_FILE>",
+  "outdir": "<PROJECT_ROOT>/analysis_output",
+  "arguments": {
+    "workdir": "<PROJECT_ROOT>",
+    "input": "<SEER_INPUT_FILE>",
+    "outdir": "analysis_output",
+    "dev_years_start": 2010,
+    "dev_years_end": 2018,
+    "test_years_start": 2019,
+    "test_years_end": 2022,
+    "exclude_years": "",
+    "allow_missing_2016_2017": false,
+    "fine_t2_main": false,
+    "treat_zero_size_missing": false,
+    "adenocarcinoma_only": false,
+    "cv_folds": 5,
+    "search_iters_logistic": 10,
+    "search_iters_xgb": 120,
+    "search_iters_cat": 120,
+    "bootstrap": 1000,
+    "n_jobs_search": 1,
+    "n_jobs_model": 1,
+    "random_state": 42,
+    "search_scoring": "average_precision",
+    "target_sensitivity": 0.8,
+    "selection_strategy": "balanced",
+    "tree_objective": "balanced",
+    "tree_calibration": "both",
+    "cal_slope_min": 0.8,
+    "cal_slope_max": 1.25,
+    "risk_low_factor": 0.5,
+    "dca_max_threshold": 0.5,
+    "xgb_tree_method": "hist",
+    "skip_xgboost": false,
+    "skip_catboost": false,
+    "skip_shap": false,
+    "fast": false,
+    "threshold_rule_display": "Maximum specificity subject to development sensitivity >= 0.80; choose the higher threshold if tied"
+  },
+  "packages": {
+    "xgboost_available": true,
+    "catboost_available": true,
+    "shap_available": true,
+    "statsmodels_available": true
+  },
+  "flow": {
+    "raw_n": 14513,
+    "within_year_window_n": 14513,
+    "known_liver_mets_n": 13751,
+    "harmonized_T1_T2_n": 5583,
+    "analysis_year_split_n": 5583
+  },
+  "tier_sizes": {
+    "Tier1": {
+      "n": 5583,
+      "events": 717
+    },
+    "Tier2": {
+      "n": 3314,
+      "events": 222
+    },
+    "Tier3": {
+      "n": 5583,
+      "events": 717
+    }
+  },
+  "notes": [
+    "T-stage distribution by coding era was checked. Inspect TableS6/manifest for possible coding-era drift.",
+    "The corrected function is a reference for future clean reruns; it does not retroactively create prospective model designation in the present study."
+  ],
+  "script_archived": "analysis_code/archived_pipeline/_embedded_modelopt_calibrated_ARCHIVED.py",
+  "script_corrected": "analysis_code/corrected_pipeline/_embedded_modelopt_calibrated_DEVELOPMENT_OOF_CORRECTED.py",
+  "artifact_role": "Sanitized metadata from the archived pipeline run",
+  "legacy_pipeline_model_emphasis": {
+    "legacy_selected_tier": "Tier3",
+    "legacy_emphasized_model": "CatBoost",
+    "current_reporting_role": "Representative model for illustrative threshold and enrichment analyses",
+    "all_fixed_tier3_candidates_primary_temporal_comparison": true,
+    "legacy_machine_tokens": {
+      "threshold_rule": "sensitivity80",
+      "selection_metric": "PR-AUC",
+      "summary_threshold_rule": "sensitivity80",
+      "summary_selection_metric": "PR-AUC"
+    },
+    "locked_threshold": 0.08367640386406207,
+    "feature_columns": [
+      "Age_Years",
+      "Age_Group",
+      "Sex",
+      "Race_Group",
+      "Marital_Status",
+      "Histology_Confirmed",
+      "Unified_T",
+      "Unified_N",
+      "Unified_Grade",
+      "Tumor_Size_Model",
+      "Missing_Size_Indicator"
+    ],
+    "legacy_model_parameters": {
+      "iterations": 678,
+      "depth": 5,
+      "learning_rate": 0.017522334232626446,
+      "l2_leaf_reg": 29.757972203852272,
+      "random_strength": 3.3561570665429628,
+      "bagging_temperature": 0.33363775832823817,
+      "border_count": 196,
+      "scale_pos_weight_mult": 0.564190080109303,
+      "probability_calibration": "sigmoid",
+      "tree_balanced_oof_score": 1.2433039875625778
+    }
+  },
+  "metric_roles": {
+    "search_scoring": "Average precision for standard search API scoring where invoked",
+    "tree_objective": "Balanced development-OOF composite for tree candidates and calibration",
+    "post_hoc_revision_audit": "Balanced composite on fixed Tier 3 development-OOF predictions only"
+  },
+  "designation_audit": {
+    "archived_code_issue": "Report-level designation function referenced the temporal-test summary",
+    "post_hoc_method": "Fixed-candidate five-fold development-OOF audit",
+    "marginal_first_rank": "CatBoost",
+    "representative_model": "CatBoost",
+    "all_fixed_tier3_candidates_primary_temporal_comparison": true,
+    "catboost_composite": 1.2433039875625778,
+    "xgboost_composite": 1.242966997,
+    "threshold_reproduced_exactly": true,
+    "threshold": 0.08367640386406207,
+    "model_calibration_or_threshold_changed": false,
+    "timing_limitation": "Post hoc audit performed after temporal-test results were known",
+    "prospectively_locked_selection_recreated": false
+  }
+}

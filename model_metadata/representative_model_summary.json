@@ -1,0 +1,48 @@
+{
+  "artifact_role": "Current representative-model reporting summary",
+  "tier": "Tier3",
+  "representative_model": "CatBoost",
+  "reporting_role": "Illustrative threshold, enrichment, sensitivity, and SHAP analyses",
+  "all_fixed_tier3_candidates_primary_temporal_comparison": true,
+  "locked_threshold": 0.08367640386406207,
+  "threshold_rule_display": "Maximum specificity subject to development sensitivity >= 0.80; choose the higher threshold if tied",
+  "legacy_machine_tokens": {
+    "threshold_rule": "sensitivity80",
+    "selection_metric": "PR-AUC"
+  },
+  "feature_columns": [
+    "Age_Years",
+    "Age_Group",
+    "Sex",
+    "Race_Group",
+    "Marital_Status",
+    "Histology_Confirmed",
+    "Unified_T",
+    "Unified_N",
+    "Unified_Grade",
+    "Tumor_Size_Model",
+    "Missing_Size_Indicator"
+  ],
+  "representative_model_parameters": {
+    "iterations": 678,
+    "depth": 5,
+    "learning_rate": 0.017522334232626446,
+    "l2_leaf_reg": 29.757972203852272,
+    "random_strength": 3.3561570665429628,
+    "bagging_temperature": 0.33363775832823817,
+    "border_count": 196,
+    "scale_pos_weight_mult": 0.564190080109303,
+    "probability_calibration": "sigmoid",
+    "tree_balanced_oof_score": 1.2433039875625778
+  },
+  "post_hoc_designation_audit": {
+    "basis": "Five-fold development out-of-fold predictions from fixed Tier 3 candidates",
+    "marginal_first_rank": "CatBoost",
+    "catboost_composite": 1.2433039875625778,
+    "xgboost_composite": 1.242966997,
+    "composite_difference": 0.0003369905625778,
+    "threshold_reproduced_exactly": true,
+    "post_temporal_knowledge_limitation": true,
+    "prospectively_locked_selection_recreated": false
+  }
+}

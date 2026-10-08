@@ -1,0 +1,87 @@
+{
+  "status": "PASS",
+  "seed": 20260721,
+  "raw_records": 14513,
+  "full_T1_T2_target_records": 5634,
+  "known_outcome_records": 5583,
+  "unknown_outcome_records": 51,
+  "development_unknown_outcomes": 34,
+  "temporal_test_unknown_outcomes": 17,
+  "unknown_raw_statuses": {
+    "Unknown": 49,
+    "Missing": 2
+  },
+  "lock_verification": {
+    "known_cohort_n": 5583,
+    "columns_verified": [
+      "Year_of_diagnosis",
+      "Temporal_Split",
+      "Coding_Era",
+      "Target_Liver_Mets",
+      "Age_Years",
+      "Age_Group",
+      "Sex",
+      "Race_Group",
+      "Marital_Status",
+      "Histology_Confirmed",
+      "Unified_T",
+      "Unified_N",
+      "Unified_Grade",
+      "Tumor_Size_Model",
+      "Missing_Size_Indicator",
+      "Tumor_Size_Observed",
+      "T_NOS",
+      "N_X",
+      "Grade_Unknown",
+      "Tumor_Size_Missing"
+    ],
+    "status": "PASS",
+    "locked_threshold": 0.08367640386406207,
+    "locked_low_cut": 0.041838201932031034,
+    "locked_tumor_size_development_median": 25.0,
+    "calibration_intercept": -1.3849184785563717,
+    "calibration_slope": 0.9968256207915122,
+    "calibration_max_absolute_reconstruction_error": 3.0531133177191805e-16,
+    "feature_columns": [
+      "Age_Years",
+      "Age_Group",
+      "Sex",
+      "Race_Group",
+      "Marital_Status",
+      "Histology_Confirmed",
+      "Unified_T",
+      "Unified_N",
+      "Unified_Grade",
+      "Tumor_Size_Model",
+      "Missing_Size_Indicator"
+    ],
+    "numeric_columns": [
+      "Age_Years",
+      "Tumor_Size_Model",
+      "Missing_Size_Indicator"
+    ],
+    "categorical_columns": [
+      "Age_Group",
+      "Sex",
+      "Race_Group",
+      "Marital_Status",
+      "Histology_Confirmed",
+      "Unified_T",
+      "Unified_N",
+      "Unified_Grade"
+    ]
+  },
+  "runtime": {
+    "python": "3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "numpy": "2.4.2",
+    "pandas": "2.3.3",
+    "scipy": "1.17.1",
+    "scikit_learn": "1.8.0"
+  },
+  "replicates": {
+    "ipw_bootstrap": 1000,
+    "paired_model_bootstrap": 5000,
+    "mnar_imputations_per_delta": 5000
+  }
+}

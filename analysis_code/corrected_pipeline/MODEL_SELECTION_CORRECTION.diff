@@ -1,0 +1,82 @@
+--- _embedded_modelopt_calibrated_ARCHIVED.py
++++ _embedded_modelopt_calibrated_DEVELOPMENT_OOF_CORRECTED.py
+@@ -1907,38 +1907,54 @@
+ # -----------------------------------------------------------------------------
+ 
+ def select_main_model(results: List[ModelResult], table3: pd.DataFrame, args: argparse.Namespace) -> Optional[ModelResult]:
+-    t3 = table3[(table3["Tier"] == "Tier3") & (~table3.get("ROC-AUC", pd.Series(dtype=float)).isna())].copy()
+-    if t3.empty:
++    """Designate the Tier 3 model from development OOF predictions only.
++
++    ``table3`` is retained in the signature for backward compatibility but is
++    intentionally ignored because it contains temporal-test estimates.
++    """
++    _ = table3
++    rows = []
++    result_lookup = {}
++    for result in results:
++        if result.tier != "Tier3":
++            continue
++        metrics = compute_metrics(result.y_dev, result.oof_pred, result.threshold)
++        rows.append({
++            "Model": result.model,
++            "ROC-AUC": metrics.get("ROC-AUC", np.nan),
++            "PR-AUC": metrics.get("PR-AUC", np.nan),
++            "F1": metrics.get("F1", np.nan),
++            "Brier": metrics.get("Brier", np.nan),
++            "Calibration slope": metrics.get("Calibration slope", np.nan),
++            "_balanced_score": tree_multi_metric_score(result.y_dev, result.oof_pred, args),
++        })
++        result_lookup[result.model] = result
++
++    pool = pd.DataFrame(rows)
++    if pool.empty:
+         return None
+-    # Guard against extremely poor calibration if available. If all fail, fall back to all.
+-    cal_ok = t3[
+-        t3["Calibration slope"].between(args.cal_slope_min, args.cal_slope_max, inclusive="both")
+-        | t3["Calibration slope"].isna()
++    cal_ok = pool[
++        pool["Calibration slope"].between(
++            args.cal_slope_min, args.cal_slope_max, inclusive="both"
++        )
++        | pool["Calibration slope"].isna()
+     ]
+-    pool = cal_ok if len(cal_ok) else t3
++    pool = cal_ok if len(cal_ok) else pool
+     if getattr(args, "selection_strategy", "primary_metric") == "balanced":
+-        # Conservative manuscript-facing selection: favor PR-AUC/ROC-AUC but penalize
+-        # poor Brier.  This avoids selecting a model that ranks well but is unusable
+-        # as a risk-stratification score.
+-        pool = pool.copy()
+-        pool["_selection_score"] = (
+-            2.00 * pool["PR-AUC"].astype(float)
+-            + 0.75 * pool["ROC-AUC"].astype(float)
+-            + 0.35 * pool["F1"].astype(float)
+-            - 1.25 * pool["Brier"].astype(float)
++        pool = pool.sort_values(
++            ["_balanced_score", "PR-AUC", "Brier"],
++            ascending=[False, False, True],
+         )
+-        pool = pool.sort_values(["_selection_score", "PR-AUC", "Brier"], ascending=[False, False, True])
+     else:
+-        metric = args.selection_metric
+-        if metric not in pool.columns:
+-            metric = "PR-AUC"
++        metric = args.selection_metric if args.selection_metric in pool.columns else "PR-AUC"
+         pool = pool.sort_values([metric, "Brier"], ascending=[False, True])
++
+     chosen_model = str(pool.iloc[0]["Model"])
+-    for r in results:
+-        if r.tier == "Tier3" and r.model == chosen_model:
+-            return r
+-    return None
+-
++    logging.info(
++        "Tier 3 model designated from development OOF predictions only: %s",
++        chosen_model,
++    )
++    return result_lookup.get(chosen_model)
+ 
+ def make_risk_table(y: np.ndarray, p: np.ndarray, threshold: float, low_factor: float = 0.5) -> pd.DataFrame:
+     low_cut = max(0.0, threshold * low_factor)

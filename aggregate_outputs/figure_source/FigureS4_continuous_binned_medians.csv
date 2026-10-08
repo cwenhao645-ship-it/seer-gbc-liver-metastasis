@@ -1,0 +1,22 @@
+Panel,Feature_value,SHAP_value,Series,Summary
+Age_Years,52.0,0.0767330607497345,Binned median,Binned median
+Age_Years,57.0,0.0784638502605862,Binned median,Binned median
+Age_Years,62.0,0.0794632331551363,Binned median,Binned median
+Age_Years,67.0,0.0795223551109794,Binned median,Binned median
+Age_Years,72.0,0.0790124718133479,Binned median,Binned median
+Age_Years,77.0,0.056662807544144,Binned median,Binned median
+Age_Years,82.0,-0.0118226636514428,Binned median,Binned median
+Age_Years,87.0,-0.3183663457892568,Binned median,Binned median
+Age_Years,90.0,-0.4907951910533212,Binned median,Binned median
+Tumor_Size_Model,4.0,-0.5567161531339833,Binned median,Binned median
+Tumor_Size_Model,10.0,-0.3631977400215194,Binned median,Binned median
+Tumor_Size_Model,15.0,-0.1218659226019918,Binned median,Binned median
+Tumor_Size_Model,20.0,-0.0785833220520404,Binned median,Binned median
+Tumor_Size_Model,22.0,-0.0197999506822859,Binned median,Binned median
+Tumor_Size_Model,25.0,0.0938193837618601,Binned median,Binned median
+Tumor_Size_Model,30.0,0.0989553924228259,Binned median,Binned median
+Tumor_Size_Model,35.0,0.1190749707081571,Binned median,Binned median
+Tumor_Size_Model,40.0,0.1290003345817978,Binned median,Binned median
+Tumor_Size_Model,49.0,0.1447864564234228,Binned median,Binned median
+Tumor_Size_Model,60.0,0.156319166706856,Binned median,Binned median
+Tumor_Size_Model,90.0,0.1643946117562962,Binned median,Binned median
