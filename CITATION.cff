@@ -5,6 +5,9 @@ title: "SEER gallbladder cancer: temporal validation of liver-metastasis risk en
 version: "1.0.0-rc1"
 license: MIT
 repository-code: "https://github.com/cwenhao645-ship-it/seer-gbc-liver-metastasis"
+doi: "10.5281/zenodo.23228827"
+url: "https://doi.org/10.5281/zenodo.23228827"
+date-released: "2026-10-08"
 authors:
   - family-names: Chen
     given-names: Wenhao

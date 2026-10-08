@@ -7,7 +7,11 @@ Code and aggregate research materials accompanying:
 This is the 8 October 2026 minor-revision snapshot, prepared for public archiving.
 The manuscript is under review. The public repository is
 [cwenhao645-ship-it/seer-gbc-liver-metastasis](https://github.com/cwenhao645-ship-it/seer-gbc-liver-metastasis).
-No article DOI or archive DOI has been assigned at the time of this snapshot.
+The versioned snapshot is archived at Zenodo:
+[10.5281/zenodo.23228827](https://doi.org/10.5281/zenodo.23228827)
+([GitHub release v1.0.0-rc1](https://github.com/cwenhao645-ship-it/seer-gbc-liver-metastasis/releases/tag/v1.0.0-rc1)).
+This is the reproducibility archive DOI, not the article DOI. The article remains
+under review.
 
 ## Scope
 
@@ -117,6 +121,7 @@ listed software contributors are Wenhao Chen and Zhan Wang; all manuscript
 authors and their agreed order are recorded in that file's description. No
 publication or repository identifier is invented.
 
-After upload, create a versioned release and archive it with Zenodo. Only then
-add the real repository URL and release DOI to the manuscript and citation
-metadata. See [PUBLICATION_STEPS.md](docs/PUBLICATION_STEPS.md).
+Release `v1.0.0-rc1` is archived with Zenodo and pinned to commit
+`26ffe17c00636fd0a3206671042de470e134aafb`. Subsequent citation/link updates on
+`main` do not alter that archived snapshot. See
+[PUBLICATION_STEPS.md](docs/PUBLICATION_STEPS.md) for future publication steps.
